@@ -15,6 +15,10 @@ get '/about' do
   erb :about
 end
 
+get '/add' do
+  erb :add
+end
+
 at_exit do
   ActiveRecord::Base.connection.close
 end
