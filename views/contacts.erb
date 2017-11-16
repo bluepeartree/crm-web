@@ -1,13 +1,19 @@
-<h1> Contacts </h1>
+<div>
+  There are <span><%=@contacts.length%></span> contacts.
+</div>
+
 
 <ul>
   <%@contacts.each do |contact| %>
-    <h3><div>Full Name: <%=contact.full_name%></div></h3>
-    <li>Contact ID: <%=contact.id%></li>
-    <li>Email: <%=contact.email%></li>
-    <li>Note: <%=contact.note%></li>
-    <div></div>
+    <div>
+      <span>
+          <h3><%=contact.full_name%> (<%=contact.email%>)</h3>
+      </span>
+    <ul>
+      <a href='#'>Edit</a>
+      |
+      <a href='#'>Delete</a>
+    </ul>
+  </div>
   <%end%>
 </ul>
-
-<a href='/'>Home</a>

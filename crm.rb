@@ -2,7 +2,8 @@ require 'sinatra'
 require_relative 'contact'
 
 get '/' do
-  erb :index
+  # erb :index
+  redirect to ('/contacts')
 end
 
 get '/contacts' do
@@ -14,6 +15,6 @@ get '/about' do
   erb :about
 end
 
-after do
+at_exit do
   ActiveRecord::Base.connection.close
 end

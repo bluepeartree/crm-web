@@ -1,0 +1,79 @@
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica;
+  line-height: 1.5;
+}
+
+header h1 {
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bolder;
+  margin: 0 0 1px 0;
+}
+
+header nav {
+  background-color: gainsboro;
+  text-align: center;
+}
+
+header nav a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight:bolder;
+  border-bottom: thin solid white;
+}
+
+main {
+  max-width: 90%;
+  margin: auto;
+  display: block;
+}
+
+main>div {
+  background-color: salmon;
+  width: 100%;
+  padding: 1em 0 1em 0;
+  margin: 1em 0 0 0;
+  display: inline-block;
+  overflow: hidden;
+}
+
+main>div>span {
+  font-weight: bolder;
+  border-bottom: solid cyan;
+}
+
+main>ul {
+  width: 100%;
+  padding:0;
+  margin:0;
+}
+
+
+main ul div {
+  background-color: cyan;
+  padding: 10px;
+  margin: 10px 0 10px 0;
+}
+
+h3 {
+  margin:0;
+}
+
+main ul ul {
+  padding: 0;
+  margin: 10px 0 10px 0;
+}
+
+footer {
+  color: white;
+  background-color: black;
+  padding: 15px;
+  text-align: center;
+  font-weight:bolder;
+  margin-top: 10px;
+}
