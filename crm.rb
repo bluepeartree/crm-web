@@ -14,19 +14,27 @@ end
 get '/contacts/:id' do
   # instructions for how to handle requests to this route will go here
   @contact = Contact.find_by({id: params[:id].to_i})
-  if @contact
+  if params[:id] == 'new'
+    erb :new
+  elsif @contact
     erb :show_contact
   else
     raise Sinatra::NotFound
   end
 end
 
-get '/about' do
-  erb :about
+post '/contacts' do
+  Contact.create(
+    first_name: params[:first_name],
+    last_name:  params[:last_name],
+    email:      params[:email],
+    note:       params[:note]
+    )
+    redirect to('/contacts')
 end
 
-get '/new' do
-  erb :new
+get '/about' do
+  erb :about
 end
 
 at_exit do
