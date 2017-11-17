@@ -7,9 +7,11 @@
   <%@contacts.each do |contact| %>
     <div>
       <span>
-          <h3><%=contact.full_name%> (<%=contact.email%>)</h3>
+          <h3><%=contact.full_name%> <span>(<%=contact.email%>)<span></h3>
       </span>
     <ul>
+      <a href='/contacts/<%=contact.id%>'>Details</a>
+      |
       <a href='#'>Edit</a>
       |
       <a href='#'>Delete</a>
