@@ -1,0 +1,21 @@
+<div>
+
+<h3>Delete Contact</h3>
+
+<p> Are you sure you want to delete <%= @contact.first_name%>'s contact? </p>
+
+</div>
+
+<ul>
+  <div>
+    <h1><%=@contact.full_name%></h1>
+    <h4><%=@contact.email%></h4>
+    <h4><%=@contact.note%></h4>
+    <h4><%=@contact.id%></h4>
+  </div>
+</ul>
+
+<form action='/contacts/<%= @contact.id %>' method='post'>
+  <input type='hidden' name='_method' value='delete'>
+  <input type='submit' value='Delete Contact'>
+</form>
