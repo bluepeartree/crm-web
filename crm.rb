@@ -25,8 +25,8 @@ get '/about' do
   erb :about
 end
 
-get '/add' do
-  erb :add
+get '/new' do
+  erb :new
 end
 
 at_exit do
